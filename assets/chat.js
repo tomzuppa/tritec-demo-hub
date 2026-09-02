@@ -235,19 +235,43 @@
       d.querySelector('.bubble').textContent = text;
       log.appendChild(d); scroll();
     }
-    function typing() {
-      const t = el('<div class="msg bot"><div class="av">TT</div><div class="bubble typing"><span></span><span></span><span></span></div></div>');
-      log.appendChild(t); scroll(); return t;
+    /* Estados de proceso: se ve lo que el asistente está haciendo */
+    function thinking() {
+      const L = lang();
+      const steps = L === 'en'
+        ? ['Reading the request', 'Searching TRI-TEC’s catalogue', 'Preparing the answer']
+        : ['Analizando la solicitud', 'Consultando el catálogo de TRI-TEC', 'Preparando la respuesta'];
+      const t = el('<div class="msg bot"><div class="av">TT</div><div class="bubble thinking"><span class="scan" aria-hidden="true"></span><span class="st"></span></div></div>');
+      const st = t.querySelector('.st');
+      let i = 0;
+      st.textContent = steps[0];
+      const timer = setInterval(() => {
+        i++;
+        if (i >= steps.length) return;
+        st.style.opacity = 0;
+        setTimeout(() => { st.textContent = steps[i]; st.style.opacity = 1; }, 180);
+      }, 620);
+      log.appendChild(t); scroll();
+      return { node: t, stop: () => clearInterval(timer) };
+    }
+
+    /* Cursor al final mientras termina de aparecer la respuesta */
+    function caret(node) {
+      const last = node.querySelector('.bubble').lastElementChild;
+      if (!last) return;
+      last.classList.add('caret');
+      setTimeout(() => last.classList.remove('caret'), 900);
     }
 
     function answer(q) {
-      const t = typing();
+      const t = thinking();
       setTimeout(() => {
-        t.remove();
+        t.stop(); t.node.remove();
         const L = lang();
         const hit = match(q);
         if (!hit) {
           bot(T.none[L] + '<div class="acts"><a href="rfq.html">' + T.cta[L] + '</a></div>');
+          caret(log.lastElementChild);
           return;
         }
         const d = hit[L];
@@ -262,7 +286,8 @@
                   : '<a href="rfq.html">' + T.cta[L] + '</a><a class="sec" href="acceso.html?rol=cliente">' + (L === 'en' ? 'Access my account' : 'Entrar a mi cuenta') + '</a>') +
                 '</div>';
         bot(html);
-      }, 620);
+        caret(log.lastElementChild);
+      }, 1750);
     }
 
     form.addEventListener('submit', e => {
