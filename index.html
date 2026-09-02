@@ -3,10 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>TRI-TEC Hub · Oferta y demanda de servicios industriales</title>
-<meta name="description" content="Maqueta conceptual del hub TRI-TEC.">
+<title>TRI-TEC · Servicios e ingeniería industrial</title>
+<meta name="description" content="Demo conceptual de dirección visual para el nuevo sitio de TRI-TEC.">
 <meta name="robots" content="noindex,nofollow">
 <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://images.unsplash.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/style.css">
@@ -14,72 +15,291 @@
 </head>
 <body>
 <a class="skip" href="#main" data-es="Ir al contenido" data-en="Skip to content">Ir al contenido</a>
-<div class="demobar" data-es="MAQUETA CONCEPTUAL · Versión hub. El asistente responde sobre el catálogo real de TRI-TEC; no hay servidor ni datos almacenados." data-en="CONCEPT MOCK-UP · Hub version. The assistant answers from TRI-TEC's real catalogue; there is no server and no data is stored.">MAQUETA CONCEPTUAL · Versión hub. El asistente responde sobre el catálogo real de TRI-TEC; no hay servidor ni datos almacenados.</div>
+
+<div class="demobar" data-es="DEMO CONCEPTUAL · Dirección visual para revisión interna. Contenido de referencia, no oficial de TRI-TEC." data-en="CONCEPT DEMO · Visual direction for internal review. Placeholder content, not official TRI-TEC copy.">DEMO CONCEPTUAL · Dirección visual para revisión interna. Contenido de referencia, no oficial de TRI-TEC.</div>
+
+<div class="util">
+  <div class="wrap util-in">
+    <span class="who-lbl" data-es="Portal TRI-TEC" data-en="TRI-TEC portal">Portal TRI-TEC</span>
+    <div class="links">
+      <a href="acceso.html?rol=proveedor" data-es="Ofrezco servicios" data-en="I offer services">Ofrezco servicios</a>
+      <a href="acceso.html?rol=cliente" data-es="Solicito servicios" data-en="I need services">Solicito servicios</a>
+      <span class="sep" aria-hidden="true"></span>
+      <a href="acceso.html?rol=tritec" data-es="Administración" data-en="Admin">Administración</a>
+    </div>
+  </div>
+</div>
 
 <header class="nav">
   <div class="wrap nav-in">
     <a class="logo" href="index.html"><img src="assets/tritec-logo.png" alt="TRI-TEC Mexico" width="512" height="512"></a>
-    <div class="access" style="margin-left:auto">
-      <a href="acceso.html?rol=proveedor" data-es="Ofrezco servicios" data-en="I offer services">Ofrezco servicios</a>
-      <a href="acceso.html?rol=cliente" data-es="Solicito servicios" data-en="I need services">Solicito servicios</a>
-      <a class="admin" href="acceso.html?rol=tritec" data-es="Administración" data-en="Admin">Administración</a>
-    </div>
+    <nav class="nav-links" id="navlinks">
+      <a href="soluciones.html" data-es="Soluciones" data-en="Solutions">Soluciones</a>
+      <a href="proyectos.html" data-es="Proyectos" data-en="Projects">Proyectos</a>
+      <a href="#proceso" data-es="Cómo trabajamos" data-en="How we work">Cómo trabajamos</a>
+      <a href="confianza-cumplimiento.html" data-es="Confianza y cumplimiento" data-en="Trust &amp; compliance">Confianza y cumplimiento</a>
+      
+      <a href="talento.html" data-es="Talento" data-en="Careers">Talento</a>
+    </nav>
     <div class="nav-actions">
-      <div class="lang" role="group" aria-label="Idioma"><button data-lang="es" aria-pressed="true">ES</button><button data-lang="en" aria-pressed="false">EN</button></div>
+      <div class="lang" role="group" aria-label="Idioma">
+        <button data-lang="es" aria-pressed="true">ES</button>
+        <button data-lang="en" aria-pressed="false">EN</button>
+      </div>
+      <a class="btn btn-primary" href="rfq.html" data-es="Solicitar evaluación" data-en="Request evaluation">Solicitar evaluación</a>
+      <button class="burger" aria-label="Menú" aria-expanded="false" aria-controls="navlinks"><span></span><span></span><span></span></button>
     </div>
   </div>
 </header>
 
 <main id="main">
 
-<section class="hub-hero">
+<!-- 1 · Qué hace TRI-TEC y para qué operaciones -->
+<section class="hero">
   <div class="wrap">
-    <span class="eyebrow rv" data-es="Hub de servicios industriales" data-en="Industrial services hub">Hub de servicios industriales</span>
-    <h1 class="rv" data-d="1" data-es="Describa lo que necesita. Nosotros sabemos quién lo resuelve." data-en="Describe what you need. We know who solves it.">Describa lo que necesita. Nosotros sabemos quién lo resuelve.</h1>
-    <p class="lead rv" data-d="2" data-es="TRI-TEC opera en más de veinte líneas, desde tooling y automatización hasta mantenimiento industrial y personal especializado. En lugar de navegar un catálogo, plantee su necesidad y el asistente identifica si entra en el alcance." data-en="TRI-TEC operates across more than twenty lines, from tooling and automation to industrial maintenance and specialized personnel. Instead of browsing a catalogue, describe your need and the assistant identifies whether it fits.">TRI-TEC opera en más de veinte líneas, desde tooling y automatización hasta mantenimiento industrial y personal especializado. En lugar de navegar un catálogo, plantee su necesidad y el asistente identifica si entra en el alcance.</p>
+    <span class="eyebrow rv" data-es="Servicios e ingeniería industrial" data-en="Industrial services &amp; engineering">Servicios e ingeniería industrial</span>
+    <h1 class="rv" data-d="1" data-es="Ejecución industrial con alcance definido, control en campo y evidencia." data-en="Industrial execution with defined scope, field control and evidence.">Ejecución industrial con alcance definido, control en campo y evidencia.</h1>
+    <p class="lead rv" data-d="2" data-es="Intervenimos en plantas automotrices e industriales que no pueden permitirse un trabajo improvisado. Integramos mantenimiento, ingeniería, obra y seguridad en un solo responsable, con planeación, supervisión y documentación de cierre." data-en="We work in automotive and industrial plants that cannot afford improvised work. We integrate maintenance, engineering, construction and safety under a single owner — with planning, supervision and closing documentation.">Intervenimos en plantas automotrices e industriales que no pueden permitirse un trabajo improvisado. Integramos mantenimiento, ingeniería, obra y seguridad en un solo responsable, con planeación, supervisión y documentación de cierre.</p>
+    <div class="hero-cta rv" data-d="3">
+      <a class="btn btn-primary" href="rfq.html">
+        <span data-es="Solicitar una evaluación" data-en="Request an evaluation">Solicitar una evaluación</span>
+        <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+      <a class="btn btn-ghost" href="#proyectos" data-es="Ver proyectos" data-en="View projects">Ver proyectos</a>
+    </div>
 
-    <div class="chat rv" data-d="3">
+    <!-- 3 · Resultados que busca generar -->
+    <div class="results">
+      <div class="rv result"><h3 data-es="Disponibilidad y confiabilidad" data-en="Availability and reliability">Disponibilidad y confiabilidad</h3><p data-es="Menos paros no programados y menos dependencia del trabajo reactivo." data-en="Fewer unplanned stops and less dependence on reactive work.">Menos paros no programados y menos dependencia del trabajo reactivo.</p></div>
+      <div class="rv result" data-d="1"><h3 data-es="Entrega de proyectos con control" data-en="Projects delivered under control">Entrega de proyectos con control</h3><p data-es="Alcance definido, avances medibles y fechas que se sostienen." data-en="Defined scope, measurable progress and dates that hold.">Alcance definido, avances medibles y fechas que se sostienen.</p></div>
+      <div class="rv result" data-d="2"><h3 data-es="Seguridad operativa" data-en="Operational safety">Seguridad operativa</h3><p data-es="Seguridad integrada a la ejecución, no como trámite posterior." data-en="Safety built into execution, not handled as paperwork afterwards.">Seguridad integrada a la ejecución, no como trámite posterior.</p></div>
+    </div>
+
+    <!-- KPIs de credibilidad -->
+    <div class="kpis rv">
+      <div class="kpi"><div class="n">+25 <small data-es="años" data-en="years">años</small></div><div class="l" data-es="Operando en Norteamérica desde 1999, en México desde 2002" data-en="Operating in North America since 1999, in Mexico since 2002">Operando en Norteamérica desde 1999, en México desde 2002</div></div>
+      <div class="kpi"><div class="n">18</div><div class="l" data-es="Ubicaciones operativas: 10 en México y 8 en Estados Unidos" data-en="Operating locations: 10 in Mexico and 8 in the United States">Ubicaciones operativas: 10 en México y 8 en Estados Unidos</div></div>
+      <div class="kpi"><div class="n">13 <small data-es="años" data-en="years">años</small></div><div class="l" data-es="Sin accidentes graves ni fatalidades en la operación México–Estados Unidos" data-en="With no serious accidents or fatalities across Mexico–US operations">Sin accidentes graves ni fatalidades en la operación México–Estados Unidos</div></div>
+      <div class="kpi"><div class="n"><small>USD</small> 30M</div><div class="l" data-es="Capacidad financiera de respaldo para proyectos" data-en="Financial capacity backing project execution">Capacidad financiera de respaldo para proyectos</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- Asistente · puerta de entrada conversacional -->
+<section class="sec alt" id="asistente">
+  <div class="wrap">
+    <div class="sec-head" style="max-width:70ch">
+      <span class="eyebrow rv" data-es="Asistente" data-en="Assistant">Asistente</span>
+      <h2 class="rv" data-d="1" data-es="¿No sabe cómo se llama lo que necesita? Descríbalo." data-en="Not sure what the service is called? Just describe it.">¿No sabe cómo se llama lo que necesita? Descríbalo.</h2>
+      <p class="lead rv" data-d="2" data-es="TRI-TEC opera en más de veinte líneas, desde tooling y automatización hasta mantenimiento predial. En lugar de recorrer el catálogo, plantee su necesidad en sus palabras y el asistente identifica si entra en el alcance y a qué área corresponde." data-en="TRI-TEC operates across more than twenty lines, from tooling and automation to facility maintenance. Instead of browsing the catalogue, describe your need in your own words and the assistant identifies whether it fits and which area handles it.">TRI-TEC opera en más de veinte líneas, desde tooling y automatización hasta mantenimiento predial. En lugar de recorrer el catálogo, plantee su necesidad en sus palabras y el asistente identifica si entra en el alcance y a qué área corresponde.</p>
+    </div>
+
+    <div class="chat rv" style="max-width:820px;margin-top:0">
       <div class="chat-head">
         <span class="chat-dot" aria-hidden="true"></span>
         <span class="t" data-es="Asistente TRI-TEC" data-en="TRI-TEC assistant">Asistente TRI-TEC</span>
         <span class="demo" data-es="Responde sobre el catálogo publicado" data-en="Answers from the published catalogue">Responde sobre el catálogo publicado</span>
       </div>
-      <div class="chat-log" id="chatlog" role="log" aria-live="polite"></div>
-      <div class="chips" id="chips">
+      <div class="chat-log" role="log" aria-live="polite"></div>
+      <div class="chips">
         <button class="chip-q" type="button" data-es="Necesito 20 soldadores certificados para un paro en marzo" data-en="I need 20 certified welders for a March shutdown">Necesito 20 soldadores certificados para un paro en marzo</button>
         <button class="chip-q" type="button" data-es="Quiero automatizar una estación manual de ensamble" data-en="I want to automate a manual assembly station">Quiero automatizar una estación manual de ensamble</button>
         <button class="chip-q" type="button" data-es="Tengo paros recurrentes en equipo crítico" data-en="I have recurring downtime on a critical asset">Tengo paros recurrentes en equipo crítico</button>
         <button class="chip-q" type="button" data-es="¿Qué documentos tienen para darlos de alta como proveedor?" data-en="What documents do you have for supplier onboarding?">¿Qué documentos tienen para darlos de alta como proveedor?</button>
         <button class="chip-q" type="button" data-es="Mi empresa quiere ofrecerles servicios" data-en="My company wants to offer you services">Mi empresa quiere ofrecerles servicios</button>
       </div>
-      <form class="chat-form" id="chatform">
-        <input id="chatinput" type="text" autocomplete="off" placeholder="Escriba su necesidad…" aria-label="Escriba su necesidad">
+      <form class="chat-form">
+        <input type="text" autocomplete="off" placeholder="Escriba su necesidad…" aria-label="Escriba su necesidad">
         <button type="submit" data-es="Enviar" data-en="Send">Enviar</button>
       </form>
     </div>
   </div>
 </section>
 
+<!-- 2 · Problemas que atiende -->
 <section class="sec">
   <div class="wrap">
     <div class="sec-head">
-      <span class="eyebrow rv" data-es="Cómo funciona" data-en="How it works">Cómo funciona</span>
-      <h2 class="rv" data-d="1" data-es="TRI-TEC consolida los dos lados" data-en="TRI-TEC consolidates both sides">TRI-TEC consolida los dos lados</h2>
-      <p class="lead rv" data-d="2" data-es="El cruce entre oferta y demanda lo hace TRI-TEC, no un algoritmo. La plataforma le da las herramientas para hacerlo con toda la información a la vista." data-en="TRI-TEC makes the match between supply and demand, not an algorithm. The platform gives it the tools to do so with all the information in view.">El cruce entre oferta y demanda lo hace TRI-TEC, no un algoritmo. La plataforma le da las herramientas para hacerlo con toda la información a la vista.</p>
+      <span class="eyebrow rv" data-es="Qué atendemos" data-en="What we address">Qué atendemos</span>
+      <h2 class="rv" data-d="1" data-es="Una ejecución deficiente no se paga en la factura. Se paga en la operación." data-en="Poor execution is not paid on the invoice. It is paid in operations.">Una ejecución deficiente no se paga en la factura. Se paga en la operación.</h2>
+      <p class="lead rv" data-d="2" data-es="Estas son las condiciones que encontramos con mayor frecuencia cuando una planta nos llama." data-en="These are the conditions we most often find when a plant calls us.">Estas son las condiciones que encontramos con mayor frecuencia cuando una planta nos llama.</p>
     </div>
-    <div class="flow">
-      <div class="flow-step rv"><div class="n">01</div><h3 data-es="Se plantea la necesidad" data-en="The need is raised">Se plantea la necesidad</h3><p data-es="El cliente describe su requerimiento en lenguaje natural. El asistente lo clasifica y captura lo indispensable para evaluarlo." data-en="The client describes the requirement in plain language. The assistant classifies it and captures what is needed to evaluate it.">El cliente describe su requerimiento en lenguaje natural. El asistente lo clasifica y captura lo indispensable para evaluarlo.</p></div>
-      <div class="flow-step rv" data-d="1"><div class="n">02</div><h3 data-es="TRI-TEC consolida" data-en="TRI-TEC consolidates">TRI-TEC consolida</h3><p data-es="Revisa el requerimiento contra su capacidad propia y contra los proveedores registrados, con sus credenciales y vigencias a la vista." data-en="It reviews the requirement against its own capacity and its registered suppliers, with credentials and validity in view.">Revisa el requerimiento contra su capacidad propia y contra los proveedores registrados, con sus credenciales y vigencias a la vista.</p></div>
-      <div class="flow-step rv" data-d="2"><div class="n">03</div><h3 data-es="Se responde con alcance" data-en="A scoped answer">Se responde con alcance</h3><p data-es="El cliente recibe alcance y tiempos, no un folleto. Si hace falta levantamiento en sitio, se dice desde la primera respuesta." data-en="The client receives scope and schedule, not a brochure. If a site survey is needed, it is stated in the first reply.">El cliente recibe alcance y tiempos, no un folleto. Si hace falta levantamiento en sitio, se dice desde la primera respuesta.</p></div>
+    <div class="problems">
+      <div class="problem rv"><span class="idx">01</span><p data-es="Paros o pérdida de disponibilidad." data-en="Downtime or loss of availability.">Paros o pérdida de disponibilidad.</p></div>
+      <div class="problem rv"><span class="idx">02</span><p data-es="Trabajos reactivos sin planeación suficiente." data-en="Reactive work without sufficient planning.">Trabajos reactivos sin planeación suficiente.</p></div>
+      <div class="problem rv"><span class="idx">03</span><p data-es="Retrabajos y desviaciones por falta de control en campo." data-en="Rework and deviations from poor field control.">Retrabajos y desviaciones por falta de control en campo.</p></div>
+      <div class="problem rv"><span class="idx">04</span><p data-es="Riesgos de seguridad, salud y medio ambiente." data-en="Safety, health and environmental risks.">Riesgos de seguridad, salud y medio ambiente.</p></div>
+      <div class="problem rv"><span class="idx">05</span><p data-es="Falta de coordinación entre diferentes proveedores." data-en="Lack of coordination between different suppliers.">Falta de coordinación entre diferentes proveedores.</p></div>
+      <div class="problem rv"><span class="idx">06</span><p data-es="Vacíos de responsabilidad." data-en="Gaps in accountability.">Vacíos de responsabilidad.</p></div>
+      <div class="problem rv"><span class="idx">07</span><p data-es="Alcances incompletos o mal definidos." data-en="Incomplete or poorly defined scopes.">Alcances incompletos o mal definidos.</p></div>
+      <div class="problem rv"><span class="idx">08</span><p data-es="Costos y fechas difíciles de controlar." data-en="Costs and dates that are hard to control.">Costos y fechas difíciles de controlar.</p></div>
+      <div class="problem rv"><span class="idx">09</span><p data-es="Falta de evidencias, documentación o criterios claros de cierre." data-en="Missing evidence, documentation or clear closing criteria.">Falta de evidencias, documentación o criterios claros de cierre.</p></div>
     </div>
   </div>
 </section>
 
+<!-- 4 · Principales capacidades -->
 <section class="sec alt">
   <div class="wrap">
     <div class="sec-head">
-      <span class="eyebrow rv" data-es="Dos entradas" data-en="Two doors">Dos entradas</span>
-      <h2 class="rv" data-d="1" data-es="¿De qué lado está?" data-en="Which side are you on?">¿De qué lado está?</h2>
+      <span class="eyebrow rv" data-es="Soluciones" data-en="Solutions">Soluciones</span>
+      <h2 class="rv" data-d="1" data-es="Capacidades que se integran en un mismo proyecto." data-en="Capabilities integrated into a single project.">Capacidades que se integran en un mismo proyecto.</h2>
+      <p class="lead rv" data-d="2" data-es="No se contratan por separado ni se coordinan entre proveedores distintos. Un solo responsable de principio a fin." data-en="They are not contracted separately or coordinated across different suppliers. One owner from start to finish.">No se contratan por separado ni se coordinan entre proveedores distintos. Un solo responsable de principio a fin.</p>
+    </div>
+    <div class="solutions">
+      <article class="solution rv">
+        <h3 data-es="Mantenimiento" data-en="Maintenance">Mantenimiento</h3>
+        <p data-es="Preventivo, correctivo y predictivo sobre equipos críticos, con diagnóstico de causa raíz." data-en="Preventive, corrective and predictive work on critical assets, with root-cause diagnosis.">Preventivo, correctivo y predictivo sobre equipos críticos, con diagnóstico de causa raíz.</p>
+        <a class="tlink" href="soluciones-mantenimiento.html"><span data-es="Ver solución" data-en="View solution">Ver solución</span><svg width="12" height="12" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      </article>
+      <article class="solution rv" data-d="1">
+        <h3 data-es="Ingeniería industrial" data-en="Industrial engineering">Ingeniería industrial</h3>
+        <p data-es="Ingeniería de detalle, modificaciones de línea e integración de equipo en operación." data-en="Detail engineering, line modifications and equipment integration in live operations.">Ingeniería de detalle, modificaciones de línea e integración de equipo en operación.</p>
+        <a class="tlink" href="soluciones-mantenimiento.html"><span data-es="Ver solución" data-en="View solution">Ver solución</span><svg width="12" height="12" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      </article>
+      <article class="solution rv" data-d="2">
+        <h3 data-es="Gestión de proyectos" data-en="Project management">Gestión de proyectos</h3>
+        <p data-es="Planeación de personal, materiales y tiempos, con supervisión y reporte de avance." data-en="Planning of people, materials and schedule, with supervision and progress reporting.">Planeación de personal, materiales y tiempos, con supervisión y reporte de avance.</p>
+        <a class="tlink" href="soluciones-mantenimiento.html"><span data-es="Ver solución" data-en="View solution">Ver solución</span><svg width="12" height="12" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      </article>
+      <article class="solution rv">
+        <h3 data-es="Ingeniería civil y construcción" data-en="Civil engineering &amp; construction">Ingeniería civil y construcción</h3>
+        <p data-es="Obra civil, adecuaciones y estructuras dentro de instalaciones en operación." data-en="Civil works, adaptations and structures inside operating facilities.">Obra civil, adecuaciones y estructuras dentro de instalaciones en operación.</p>
+        <a class="tlink" href="soluciones-mantenimiento.html"><span data-es="Ver solución" data-en="View solution">Ver solución</span><svg width="12" height="12" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      </article>
+      <article class="solution rv" data-d="1">
+        <h3 data-es="Automotriz y pintura" data-en="Automotive &amp; paint">Automotriz y pintura</h3>
+        <p data-es="Intervención en procesos y áreas de pintura bajo los estándares de una operación Tier 1." data-en="Work on processes and paint areas under Tier 1 operating standards.">Intervención en procesos y áreas de pintura bajo los estándares de una operación Tier 1.</p>
+        <a class="tlink" href="soluciones-mantenimiento.html"><span data-es="Ver solución" data-en="View solution">Ver solución</span><svg width="12" height="12" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      </article>
+      <article class="solution rv" data-d="2">
+        <h3 data-es="Seguridad y EHS" data-en="Safety &amp; EHS">Seguridad y EHS</h3>
+        <p data-es="Integración de seguridad en la ejecución, permisos, supervisión y evidencia documental." data-en="Safety integrated into execution: permits, supervision and documented evidence.">Integración de seguridad en la ejecución, permisos, supervisión y evidencia documental.</p>
+        <a class="tlink" href="soluciones-mantenimiento.html"><span data-es="Ver solución" data-en="View solution">Ver solución</span><svg width="12" height="12" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      </article>
+      <article class="solution rv">
+        <h3 data-es="Servicios especializados de personal" data-en="Specialized personnel services">Servicios especializados de personal</h3>
+        <p data-es="Personal técnico especializado bajo registro REPSE vigente y alcance autorizado." data-en="Specialized technical personnel under current REPSE registration and authorized scope.">Personal técnico especializado bajo registro REPSE vigente y alcance autorizado.</p>
+        <a class="tlink" href="confianza-cumplimiento.html"><span data-es="Ver REPSE" data-en="View REPSE">Ver REPSE</span><svg width="12" height="12" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- 5 · Proyectos destacados -->
+<section class="sec" id="proyectos">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow rv" data-es="Proyectos" data-en="Projects">Proyectos</span>
+      <h2 class="rv" data-d="1" data-es="La experiencia se comprueba con casos, no con adjetivos." data-en="Experience is proven with cases, not adjectives.">La experiencia se comprueba con casos, no con adjetivos.</h2>
+      <p class="lead rv" data-d="2" data-es="Cuando el cliente es confidencial, el proyecto se publica por tipo de operación y región, conservando el detalle técnico que demuestra la capacidad." data-en="When the client is confidential, the project is published by operation type and region, keeping the technical detail that proves capability.">Cuando el cliente es confidencial, el proyecto se publica por tipo de operación y región, conservando el detalle técnico que demuestra la capacidad.</p>
+    </div>
+    <div class="projects">
+      <article class="project rv">
+        <div class="shot has-img"><img src="https://images.unsplash.com/photo-1777642328916-d96fc156f32b?w=900&q=70&fm=jpg&fit=crop" alt="Linea de ensamble automotriz" loading="lazy"><span class="shot-tag" data-es="Imagen provisional" data-en="Placeholder image">Imagen provisional</span></div>
+        <div class="project-meta"><span data-es="Automotriz" data-en="Automotive">Automotriz</span><span>·</span><span data-es="Norte de México" data-en="Northern Mexico">Norte de México</span></div>
+        <h3 data-es="Planta automotriz Tier 1 — adecuación de línea" data-en="Tier 1 automotive plant — line adaptation">Planta automotriz Tier 1 — adecuación de línea</h3>
+        <p data-es="Ingeniería, obra civil y montaje ejecutados en ventanas de paro programado, sin afectar la producción de la planta." data-en="Engineering, civil works and assembly executed within scheduled shutdown windows, without affecting plant output.">Ingeniería, obra civil y montaje ejecutados en ventanas de paro programado, sin afectar la producción de la planta.</p>
+        <a class="tlink" href="proyecto-adecuacion-linea.html"><span data-es="Ver caso" data-en="View case">Ver caso</span><svg width="12" height="12" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      </article>
+      <article class="project rv" data-d="1">
+        <div class="shot has-img"><img src="https://images.unsplash.com/photo-1730584474196-b0e8a29303e8?w=900&q=70&fm=jpg&fit=crop" alt="Trabajo de soldadura en planta" loading="lazy"><span class="shot-tag" data-es="Imagen provisional" data-en="Placeholder image">Imagen provisional</span></div>
+        <div class="project-meta"><span data-es="Manufactura" data-en="Manufacturing">Manufactura</span><span>·</span><span data-es="Bajío" data-en="Bajío region">Bajío</span></div>
+        <h3 data-es="Programa de mantenimiento en equipos críticos" data-en="Critical asset maintenance program">Programa de mantenimiento en equipos críticos</h3>
+        <p data-es="Línea base de paros no programados, rutinas por equipo y diagnóstico de causa raíz documentado por intervención." data-en="Baseline of unplanned downtime, per-asset routines and root-cause analysis documented per intervention.">Línea base de paros no programados, rutinas por equipo y diagnóstico de causa raíz documentado por intervención.</p>
+        <a class="tlink" href="proyecto-adecuacion-linea.html"><span data-es="Ver caso" data-en="View case">Ver caso</span><svg width="12" height="12" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      </article>
+      <article class="project rv" data-d="2">
+        <div class="shot has-img"><img src="https://images.unsplash.com/photo-1785306589602-15f4bb004691?w=900&q=70&fm=jpg&fit=crop" alt="Celda robotizada en operacion" loading="lazy"><span class="shot-tag" data-es="Imagen provisional" data-en="Placeholder image">Imagen provisional</span></div>
+        <div class="project-meta"><span data-es="Automotriz" data-en="Automotive">Automotriz</span><span>·</span><span data-es="Pintura" data-en="Paint">Pintura</span></div>
+        <h3 data-es="Intervención en área de pintura" data-en="Paint area intervention">Intervención en área de pintura</h3>
+        <p data-es="Trabajo en zona de proceso controlado, con permisos, supervisión EHS y expediente de cierre completo." data-en="Work in a controlled process area, with permits, EHS supervision and a complete closing dossier.">Trabajo en zona de proceso controlado, con permisos, supervisión EHS y expediente de cierre completo.</p>
+        <a class="tlink" href="proyecto-adecuacion-linea.html"><span data-es="Ver caso" data-en="View case">Ver caso</span><svg width="12" height="12" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- 6 · Forma general de trabajo -->
+<section class="sec alt" id="proceso">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow rv" data-es="Cómo trabajamos" data-en="How we work">Cómo trabajamos</span>
+      <h2 class="rv" data-d="1" data-es="Diez pasos, cada uno con evidencia." data-en="Ten steps, each with evidence.">Diez pasos, cada uno con evidencia.</h2>
+      <p class="lead rv" data-d="2" data-es="No es una metodología de consultoría. Es la forma en que se ejecuta cada trabajo en campo." data-en="This is not a consulting methodology. It is how each job is executed in the field.">No es una metodología de consultoría. Es la forma en que se ejecuta cada trabajo en campo.</p>
+    </div>
+    <div class="steps">
+      <div class="step rv"><div class="n">01 — 02</div><h3 data-es="Recepción y revisión" data-en="Intake and review">Recepción y revisión</h3><p data-es="Se recibe el requerimiento y se revisa si TRI-TEC puede atenderlo con el alcance solicitado." data-en="The requirement is received and reviewed to confirm TRI-TEC can address the requested scope.">Se recibe el requerimiento y se revisa si TRI-TEC puede atenderlo con el alcance solicitado.</p></div>
+      <div class="step rv" data-d="1"><div class="n">03 — 04</div><h3 data-es="Diagnóstico y alcance" data-en="Assessment and scope">Diagnóstico y alcance</h3><p data-es="Levantamiento en sitio y definición del alcance, incluyendo lo que queda fuera." data-en="On-site survey and scope definition, including what is excluded.">Levantamiento en sitio y definición del alcance, incluyendo lo que queda fuera.</p></div>
+      <div class="step rv" data-d="2"><div class="n">05 — 06</div><h3 data-es="Planeación y ejecución" data-en="Planning and execution">Planeación y ejecución</h3><p data-es="Personal, materiales, herramientas y tiempos definidos antes de entrar a planta." data-en="People, materials, tools and schedule defined before entering the plant.">Personal, materiales, herramientas y tiempos definidos antes de entrar a planta.</p></div>
+      <div class="step rv" data-d="3"><div class="n">07 — 08</div><h3 data-es="Supervisión y avances" data-en="Supervision and progress">Supervisión y avances</h3><p data-es="Control en campo con reportes de avance y evidencia fotográfica documentada." data-en="Field control with progress reports and documented photographic evidence.">Control en campo con reportes de avance y evidencia fotográfica documentada.</p></div>
+      <div class="step rv"><div class="n">09 — 10</div><h3 data-es="Validación y cierre" data-en="Validation and closure">Validación y cierre</h3><p data-es="Validación contra criterio de aceptación, expediente técnico y seguimiento posterior." data-en="Validation against acceptance criteria, technical dossier and follow-up.">Validación contra criterio de aceptación, expediente técnico y seguimiento posterior.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 7 · Confianza -->
+<section class="sec">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow rv" data-es="Confianza y cumplimiento" data-en="Trust and compliance">Confianza y cumplimiento</span>
+      <h2 class="rv" data-d="1" data-es="Todo lo que Compras necesita para darnos de alta." data-en="Everything Procurement needs to onboard us.">Todo lo que Compras necesita para darnos de alta.</h2>
+      <p class="lead rv" data-d="2" data-es="Registros, certificaciones y evaluaciones con su alcance, su emisor y su vigencia. No una pared de logotipos." data-en="Registrations, certifications and assessments with scope, issuer and validity. Not a wall of logos.">Registros, certificaciones y evaluaciones con su alcance, su emisor y su vigencia. No una pared de logotipos.</p>
+    </div>
+    <div class="coverage rv">
+      <div class="cov"><div class="n">REPSE</div><div class="l" data-es="Registro vigente con alcance autorizado" data-en="Current registration with authorized scope">Registro vigente con alcance autorizado</div></div>
+      <div class="cov"><div class="n">ISO 9001</div><div class="l" data-es="Sistema de gestión de calidad" data-en="Quality management system">Sistema de gestión de calidad</div></div>
+      <div class="cov"><div class="n">AVETTA</div><div class="l" data-es="Evaluación de proveedores" data-en="Supplier assessment">Evaluación de proveedores</div></div>
+      <div class="cov"><div class="n">NECSUS</div><div class="l" data-es="Cumplimiento en cadena de suministro" data-en="Supply-chain compliance">Cumplimiento en cadena de suministro</div></div>
+      <div class="cov"><div class="n">D-U-N-S</div><div class="l" data-es="Identificación empresarial" data-en="Business identification">Identificación empresarial</div></div>
+      <div class="cov"><div class="n">ESR</div><div class="l" data-es="Distintivo de responsabilidad social" data-en="Social responsibility distinction">Distintivo de responsabilidad social</div></div>
+    </div>
+
+    <div style="margin-top:clamp(48px,6vw,72px)">
+      <span class="eyebrow rv" style="display:block;margin-bottom:16px" data-es="Experiencia industrial" data-en="Industrial experience">Experiencia industrial</span>
+      <h3 class="rv" style="font-size:clamp(1.25rem,2.2vw,1.75rem);margin-bottom:8px" data-es="Operaciones que ya confiaron la ejecución" data-en="Operations that already trusted the execution">Operaciones que ya confiaron la ejecución</h3>
+      <div class="clients rv">
+        <div class="client">General Motors</div>
+        <div class="client">Ford</div>
+        <div class="client">Daimler</div>
+        <div class="client">Volvo</div>
+        <div class="client">Bombardier</div>
+        <div class="client">Grupo Antolin</div>
+        <div class="client">Gerdau Corsa</div>
+        <div class="client">Herdez</div>
+      </div>
+      <p class="small muted rv" style="margin-top:14px" data-es="Nombres tomados de los materiales comerciales de TRI-TEC. Su publicación en el sitio queda sujeta a autorización expresa de cada cliente." data-en="Names taken from TRI-TEC's commercial materials. Publication on the site is subject to each client's express authorization.">Nombres tomados de los materiales comerciales de TRI-TEC. Su publicación en el sitio queda sujeta a autorización expresa de cada cliente.</p>
+    </div>
+
+    <p style="margin-top:36px" class="rv">
+      <a class="tlink" href="confianza-cumplimiento.html"><span data-es="Ver todos los registros y su vigencia" data-en="View all registrations and validity">Ver todos los registros y su vigencia</span><svg width="12" height="12" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    </p>
+  </div>
+</section>
+
+<!-- 8 · Cobertura -->
+<section class="sec alt">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow rv" data-es="Cobertura" data-en="Coverage">Cobertura</span>
+      <h2 class="rv" data-d="1" data-es="Presencia operativa donde está la industria." data-en="Operational presence where the industry is.">Presencia operativa donde está la industria.</h2>
+    </div>
+    <div class="coverage rv">
+      <div class="cov"><div class="n" data-es="Norte" data-en="North">Norte</div><div class="l" data-es="Corredor automotriz y manufactura de exportación" data-en="Automotive corridor and export manufacturing">Corredor automotriz y manufactura de exportación</div></div>
+      <div class="cov"><div class="n" data-es="Bajío" data-en="Bajío">Bajío</div><div class="l" data-es="Plantas automotrices y proveeduría Tier 1 y Tier 2" data-en="Automotive plants and Tier 1 / Tier 2 suppliers">Plantas automotrices y proveeduría Tier 1 y Tier 2</div></div>
+      <div class="cov"><div class="n" data-es="Centro" data-en="Central">Centro</div><div class="l" data-es="Industria general y operaciones de proceso" data-en="General industry and process operations">Industria general y operaciones de proceso</div></div>
+    </div>
+    <p class="small muted rv" style="margin-top:28px" data-es="Cobertura de referencia para la demo. La presencia operativa real se confirma con TRI-TEC." data-en="Reference coverage for the demo. Actual operational presence to be confirmed with TRI-TEC.">Cobertura de referencia para la demo. La presencia operativa real se confirma con TRI-TEC.</p>
+  </div>
+</section>
+
+<!-- Dos puertas del portal -->
+<section class="sec">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow rv" data-es="Portal" data-en="Portal">Portal</span>
+      <h2 class="rv" data-d="1" data-es="Los dos lados operan en el mismo lugar" data-en="Both sides operate in the same place">Los dos lados operan en el mismo lugar</h2>
+      <p class="lead rv" data-d="2" data-es="TRI-TEC recibe requerimientos de plantas y capacidades de proveedores, y hace el cruce con toda la información a la vista. La decisión es de TRI-TEC; el sistema solo la ordena." data-en="TRI-TEC receives requirements from plants and capabilities from suppliers, and matches them with all the information in view. The decision is TRI-TEC's; the system only organizes it.">TRI-TEC recibe requerimientos de plantas y capacidades de proveedores, y hace el cruce con toda la información a la vista. La decisión es de TRI-TEC; el sistema solo la ordena.</p>
     </div>
     <div class="gates">
       <article class="gate rv">
@@ -108,13 +328,18 @@
   </div>
 </section>
 
-<section class="sec">
+<!-- 9 · Acción comercial -->
+<section class="cta" id="rfq">
   <div class="wrap">
-    <div class="kpis rv" style="margin-top:0">
-      <div class="kpi"><div class="n">+25 <small data-es="años" data-en="years">años</small></div><div class="l" data-es="Operando en Norteamérica desde 1999, en México desde 2002" data-en="Operating in North America since 1999, in Mexico since 2002">Operando en Norteamérica desde 1999, en México desde 2002</div></div>
-      <div class="kpi"><div class="n">18</div><div class="l" data-es="Ubicaciones operativas en México y Estados Unidos" data-en="Operating locations in Mexico and the United States">Ubicaciones operativas en México y Estados Unidos</div></div>
-      <div class="kpi"><div class="n">13 <small data-es="años" data-en="years">años</small></div><div class="l" data-es="Sin accidentes graves ni fatalidades reportadas" data-en="With no serious accidents or fatalities reported">Sin accidentes graves ni fatalidades reportadas</div></div>
-      <div class="kpi"><div class="n"><small>USD</small> 30M</div><div class="l" data-es="Capacidad financiera de respaldo para proyectos" data-en="Financial capacity backing project execution">Capacidad financiera de respaldo para proyectos</div></div>
+    <span class="eyebrow rv" data-es="Siguiente paso" data-en="Next step">Siguiente paso</span>
+    <h2 class="rv" data-d="1" data-es="Comparta el requerimiento. Respondemos con alcance y tiempos." data-en="Share the requirement. We reply with scope and schedule.">Comparta el requerimiento. Respondemos con alcance y tiempos.</h2>
+    <p class="lead rv" data-d="2" data-es="Planos, especificaciones o la descripción del problema. Si hace falta un levantamiento en sitio, lo decimos desde la primera respuesta." data-en="Drawings, specifications or a description of the problem. If an on-site survey is needed, we say so in our first reply.">Planos, especificaciones o la descripción del problema. Si hace falta un levantamiento en sitio, lo decimos desde la primera respuesta.</p>
+    <div class="cta-actions rv" data-d="3">
+      <a class="btn btn-primary" href="rfq.html">
+        <span data-es="Enviar una RFQ" data-en="Submit an RFQ">Enviar una RFQ</span>
+        <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+      <a class="btn btn-ghost" href="rfq.html" data-es="Hablar con TRI-TEC" data-en="Talk to TRI-TEC">Hablar con TRI-TEC</a>
     </div>
   </div>
 </section>
@@ -123,8 +348,32 @@
 
 <footer class="foot">
   <div class="wrap">
-    <div class="foot-bottom" style="border:0;margin:0;padding:0">
-      <span data-es="© 2026 TRI-TEC · Maqueta conceptual sin valor contractual" data-en="© 2026 TRI-TEC · Concept mock-up, no contractual value">© 2026 TRI-TEC · Maqueta conceptual sin valor contractual</span>
+    <div class="foot-grid">
+      <div>
+        <a class="logo" href="index.html"><img src="assets/tritec-logo.png" alt="TRI-TEC Mexico" width="512" height="512"></a>
+        <p class="small muted" style="max-width:32ch;margin-top:14px" data-es="Servicios e ingeniería industrial para operaciones que no pueden detenerse." data-en="Industrial services and engineering for operations that cannot stop.">Servicios e ingeniería industrial para operaciones que no pueden detenerse.</p>
+      </div>
+      <div><h4 data-es="Soluciones" data-en="Solutions">Soluciones</h4><ul>
+        <li><a href="soluciones-mantenimiento.html" data-es="Mantenimiento" data-en="Maintenance">Mantenimiento</a></li>
+        <li><a href="soluciones-mantenimiento.html" data-es="Ingeniería industrial" data-en="Industrial engineering">Ingeniería industrial</a></li>
+        <li><a href="soluciones-mantenimiento.html" data-es="Gestión de proyectos" data-en="Project management">Gestión de proyectos</a></li>
+        <li><a href="soluciones-mantenimiento.html" data-es="Seguridad y EHS" data-en="Safety &amp; EHS">Seguridad y EHS</a></li>
+      </ul></div>
+      <div><h4 data-es="Institucional" data-en="Corporate">Institucional</h4><ul>
+        <li><a href="confianza-cumplimiento.html" data-es="Confianza y cumplimiento" data-en="Trust &amp; compliance">Confianza y cumplimiento</a></li>
+        <li></li>
+        <li><a href="talento.html" data-es="Talento" data-en="Careers">Talento</a></li>
+        <li><a href="proveedores.html" data-es="Registro de proveedores" data-en="Supplier registration">Registro de proveedores</a></li>
+      </ul></div>
+      <div><h4 data-es="Legal" data-en="Legal">Legal</h4><ul>
+        <li><a href="#" data-es="Aviso de privacidad" data-en="Privacy notice">Aviso de privacidad</a></li>
+        <li><a href="#" data-es="Código de ética" data-en="Code of ethics">Código de ética</a></li>
+        <li><a href="#" data-es="Canal de denuncias" data-en="Whistleblower channel">Canal de denuncias</a></li>
+        <li><a href="#" data-es="Preferencias de cookies" data-en="Cookie preferences">Preferencias de cookies</a></li>
+      </ul></div>
+    </div>
+    <div class="foot-bottom">
+      <span data-es="© 2026 TRI-TEC · Demo conceptual sin valor contractual" data-en="© 2026 TRI-TEC · Concept demo, no contractual value">© 2026 TRI-TEC · Demo conceptual sin valor contractual</span>
       <span data-es="Propuesta preparada por BAOBYTE" data-en="Proposal prepared by BAOBYTE">Propuesta preparada por BAOBYTE</span>
     </div>
   </div>

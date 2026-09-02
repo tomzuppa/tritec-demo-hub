@@ -4,12 +4,6 @@
    en condicional y deriva a evaluación. */
 
 (function () {
-  const log = document.getElementById('chatlog');
-  const form = document.getElementById('chatform');
-  const input = document.getElementById('chatinput');
-  const chips = document.getElementById('chips');
-  if (!log) return;
-
   const lang = () => document.documentElement.lang === 'en' ? 'en' : 'es';
 
   // ---- Base de conocimiento derivada del catálogo y materiales de TRI-TEC ----
@@ -206,21 +200,6 @@
   };
 
   function el(html) { const d = document.createElement('div'); d.innerHTML = html.trim(); return d.firstElementChild; }
-  function scroll() { log.scrollTop = log.scrollHeight; }
-
-  function bot(html) {
-    log.appendChild(el('<div class="msg bot"><div class="av">TT</div><div class="bubble">' + html + '</div></div>'));
-    scroll();
-  }
-  function me(text) {
-    const d = el('<div class="msg me"><div class="av">TÚ</div><div class="bubble"></div></div>');
-    d.querySelector('.bubble').textContent = text;
-    log.appendChild(d); scroll();
-  }
-  function typing() {
-    const t = el('<div class="msg bot" data-typing><div class="av">TT</div><div class="bubble typing"><span></span><span></span><span></span></div></div>');
-    log.appendChild(t); scroll(); return t;
-  }
 
   function norm(s) {
     return s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
@@ -237,48 +216,89 @@
     return score > 0 ? best : null;
   }
 
-  function answer(q) {
-    const t = typing();
-    setTimeout(() => {
-      t.remove();
-      const L = lang();
-      const hit = match(q);
-      if (!hit) {
-        bot(T.none[L] +
-          '<div class="acts"><a href="requerimiento.html">' + T.cta[L] + '</a></div>');
-        return;
-      }
-      const d = hit[L];
-      const isSupplier = hit.k.includes('proveedor');
-      let html = '<p><strong>' + d.t + '</strong></p><p>' + d.b + '</p><ul>' +
-                 d.li.map(x => '<li>' + x + '</li>').join('') + '</ul>' +
-                 '<p style="margin-top:10px">' + d.n + '</p>' +
-                 '<p style="margin-top:10px;font-size:.75rem;color:var(--ink-3)">' + T.hedge[L] + '</p>';
-      html += '<div class="acts">' +
-              (isSupplier
-                ? '<a href="acceso.html?rol=proveedor">' + T.cta2[L] + '</a><a class="sec" href="requerimiento.html">' + T.cta[L] + '</a>'
-                : '<a href="requerimiento.html">' + T.cta[L] + '</a><a class="sec" href="acceso.html?rol=cliente">' + (L === 'en' ? 'Access my account' : 'Entrar a mi cuenta') + '</a>') +
-              '</div>';
-      bot(html);
-    }, 620);
-  }
+  /* Inicializa una instancia de chat sobre un contenedor .chat */
+  function init(root) {
+    const log = root.querySelector('.chat-log');
+    const form = root.querySelector('.chat-form');
+    const input = form && form.querySelector('input');
+    const chips = root.querySelector('.chips');
+    if (!log || !form) return;
 
-  form.addEventListener('submit', e => {
-    e.preventDefault();
-    const q = input.value.trim();
-    if (!q) return;
-    me(q); input.value = ''; answer(q);
-    if (chips) chips.style.display = 'none';
-  });
+    const scroll = () => { log.scrollTop = log.scrollHeight; };
 
-  if (chips) {
-    chips.addEventListener('click', e => {
-      const b = e.target.closest('.chip-q');
-      if (!b) return;
-      const q = b.textContent.trim();
-      me(q); answer(q); chips.style.display = 'none';
+    function bot(html) {
+      log.appendChild(el('<div class="msg bot"><div class="av">TT</div><div class="bubble">' + html + '</div></div>'));
+      scroll();
+    }
+    function me(text) {
+      const d = el('<div class="msg me"><div class="av">TÚ</div><div class="bubble"></div></div>');
+      d.querySelector('.bubble').textContent = text;
+      log.appendChild(d); scroll();
+    }
+    function typing() {
+      const t = el('<div class="msg bot"><div class="av">TT</div><div class="bubble typing"><span></span><span></span><span></span></div></div>');
+      log.appendChild(t); scroll(); return t;
+    }
+
+    function answer(q) {
+      const t = typing();
+      setTimeout(() => {
+        t.remove();
+        const L = lang();
+        const hit = match(q);
+        if (!hit) {
+          bot(T.none[L] + '<div class="acts"><a href="rfq.html">' + T.cta[L] + '</a></div>');
+          return;
+        }
+        const d = hit[L];
+        const isSupplier = hit.k.indexOf('proveedor') !== -1;
+        let html = '<p><strong>' + d.t + '</strong></p><p>' + d.b + '</p><ul>' +
+                   d.li.map(x => '<li>' + x + '</li>').join('') + '</ul>' +
+                   '<p style="margin-top:10px">' + d.n + '</p>' +
+                   '<p style="margin-top:10px;font-size:.75rem;color:var(--ink-3)">' + T.hedge[L] + '</p>';
+        html += '<div class="acts">' +
+                (isSupplier
+                  ? '<a href="acceso.html?rol=proveedor">' + T.cta2[L] + '</a><a class="sec" href="proveedores.html">' + (L === 'en' ? 'Supplier registration' : 'Registro de proveedores') + '</a>'
+                  : '<a href="rfq.html">' + T.cta[L] + '</a><a class="sec" href="acceso.html?rol=cliente">' + (L === 'en' ? 'Access my account' : 'Entrar a mi cuenta') + '</a>') +
+                '</div>';
+        bot(html);
+      }, 620);
+    }
+
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      const q = input.value.trim();
+      if (!q) return;
+      me(q); input.value = ''; answer(q);
+      if (chips) chips.style.display = 'none';
     });
+
+    if (chips) {
+      chips.addEventListener('click', e => {
+        const b = e.target.closest('.chip-q');
+        if (!b) return;
+        me(b.textContent.trim()); answer(b.textContent.trim()); chips.style.display = 'none';
+      });
+    }
+
+    bot(T.intro[lang()]);
   }
 
-  bot(T.intro[lang()]);
+  document.querySelectorAll('.chat').forEach(init);
+
+  /* Lanzador flotante */
+  const fab = document.querySelector('.fab');
+  const panel = document.querySelector('.fab-panel');
+  if (fab && panel) {
+    const close = panel.querySelector('.fab-close');
+    const open = () => {
+      panel.classList.add('open'); fab.style.display = 'none';
+      const i = panel.querySelector('.chat-form input');
+      if (i) setTimeout(() => i.focus(), 260);
+    };
+    const hide = () => { panel.classList.remove('open'); fab.style.display = ''; };
+    fab.addEventListener('click', open);
+    if (close) close.addEventListener('click', hide);
+    document.addEventListener('keydown', e => { if (e.key === 'Escape' && panel.classList.contains('open')) hide(); });
+  }
 })();

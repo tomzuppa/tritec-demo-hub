@@ -13,18 +13,34 @@
 </head>
 <body>
 <a class="skip" href="#main" data-es="Ir al contenido" data-en="Skip to content">Ir al contenido</a>
-<div class="demobar" data-es="MAQUETA CONCEPTUAL · Confirmación simulada. No se almacenó ninguna información." data-en="CONCEPT MOCK-UP · Simulated confirmation. No information was stored.">MAQUETA CONCEPTUAL · Confirmación simulada. No se almacenó ninguna información.</div>
+<div class="demobar" data-es="DEMO CONCEPTUAL · Confirmación simulada. No se almacenó ninguna información." data-en="CONCEPT DEMO · Simulated confirmation. No information was stored.">DEMO CONCEPTUAL · Confirmación simulada. No se almacenó ninguna información.</div>
+
+<div class="util">
+  <div class="wrap util-in">
+    <span class="who-lbl" data-es="Portal TRI-TEC" data-en="TRI-TEC portal">Portal TRI-TEC</span>
+    <div class="links">
+      <a href="acceso.html?rol=proveedor" data-es="Ofrezco servicios" data-en="I offer services">Ofrezco servicios</a>
+      <a href="acceso.html?rol=cliente" data-es="Solicito servicios" data-en="I need services">Solicito servicios</a>
+      <span class="sep" aria-hidden="true"></span>
+      <a href="acceso.html?rol=tritec" data-es="Administración" data-en="Admin">Administración</a>
+    </div>
+  </div>
+</div>
 
 <header class="nav">
   <div class="wrap nav-in">
     <a class="logo" href="index.html"><img src="assets/tritec-logo.png" alt="TRI-TEC Mexico" width="512" height="512"></a>
-        <div class="access" style="margin-left:auto">
-      <a href="acceso.html?rol=proveedor" data-es="Ofrezco servicios" data-en="I offer services">Ofrezco servicios</a>
-      <a href="acceso.html?rol=cliente" data-es="Solicito servicios" data-en="I need services">Solicito servicios</a>
-      <a class="admin" href="acceso.html?rol=tritec" data-es="Administración" data-en="Admin">Administración</a>
-    </div>
-<div class="nav-actions">
+    <nav class="nav-links" id="navlinks">
+      <a href="soluciones.html" data-es="Soluciones" data-en="Solutions">Soluciones</a>
+      <a href="proyectos.html" data-es="Proyectos" data-en="Projects">Proyectos</a>
+      <a href="index.html#proceso" data-es="Cómo trabajamos" data-en="How we work">Cómo trabajamos</a>
+      <a href="confianza-cumplimiento.html" data-es="Confianza y cumplimiento" data-en="Trust &amp; compliance">Confianza y cumplimiento</a>
+      <a href="talento.html" data-es="Talento" data-en="Careers">Talento</a>
+    </nav>
+    <div class="nav-actions">
       <div class="lang" role="group" aria-label="Idioma"><button data-lang="es" aria-pressed="true">ES</button><button data-lang="en" aria-pressed="false">EN</button></div>
+      <a class="btn btn-primary" href="rfq.html" data-es="Solicitar evaluación" data-en="Request evaluation">Solicitar evaluación</a>
+      <button class="burger" aria-label="Menú" aria-expanded="false" aria-controls="navlinks"><span></span><span></span><span></span></button>
     </div>
   </div>
 </header>
@@ -53,12 +69,36 @@
 
       <div class="cta-actions" style="justify-content:center;margin-top:30px">
         <a class="btn btn-primary" href="index.html" data-es="Volver al inicio" data-en="Back home">Volver al inicio</a>
-        <a class="btn btn-ghost" href="index.html" data-es="Ver proyectos" data-en="View projects">Ver proyectos</a>
+        <a class="btn btn-ghost" href="proyectos.html" data-es="Ver proyectos" data-en="View projects">Ver proyectos</a>
       </div>
     </div>
   </div>
 </section>
 </main>
+
+<button class="fab" aria-label="Abrir asistente">
+  <svg width="17" height="17" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 5.5A2.5 2.5 0 0 1 5.5 3h9A2.5 2.5 0 0 1 17 5.5v6A2.5 2.5 0 0 1 14.5 14H8l-4 3.5V14h-.5A.5.5 0 0 1 3 13.5v-8Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+  <span data-es="Asistente" data-en="Assistant">Asistente</span>
+</button>
+<div class="fab-panel" role="dialog" aria-label="Asistente TRI-TEC">
+  <div class="chat">
+    <div class="chat-head">
+      <span class="chat-dot" aria-hidden="true"></span>
+      <span class="t" data-es="Asistente TRI-TEC" data-en="TRI-TEC assistant">Asistente TRI-TEC</span>
+      <button class="fab-close" aria-label="Cerrar">&times;</button>
+    </div>
+    <div class="chat-log" role="log" aria-live="polite"></div>
+    <div class="chips"><button class="chip-q" type="button" data-es="Necesito 20 soldadores certificados para un paro en marzo" data-en="I need 20 certified welders for a March shutdown">Necesito 20 soldadores certificados para un paro en marzo</button>
+        <button class="chip-q" type="button" data-es="Quiero automatizar una estación manual de ensamble" data-en="I want to automate a manual assembly station">Quiero automatizar una estación manual de ensamble</button>
+        <button class="chip-q" type="button" data-es="Tengo paros recurrentes en equipo crítico" data-en="I have recurring downtime on a critical asset">Tengo paros recurrentes en equipo crítico</button>
+        <button class="chip-q" type="button" data-es="Mi empresa quiere ofrecerles servicios" data-en="My company wants to offer you services">Mi empresa quiere ofrecerles servicios</button></div>
+    <form class="chat-form">
+      <input type="text" autocomplete="off" placeholder="Escriba su necesidad…" aria-label="Escriba su necesidad">
+      <button type="submit" data-es="Enviar" data-en="Send">Enviar</button>
+    </form>
+  </div>
+</div>
+
 
 <footer class="foot">
   <div class="wrap">
@@ -70,6 +110,7 @@
 </footer>
 
 <script src="assets/app.js"></script>
+<script src="assets/chat.js"></script>
 <script src="assets/forms.js"></script>
 </body>
 </html>
