@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Acceso · TRI-TEC Hub</title>
+<meta name="robots" content="noindex,nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="stylesheet" href="assets/hub.css">
+</head>
+<body>
+<a class="skip" href="#main" data-es="Ir al contenido" data-en="Skip to content">Ir al contenido</a>
+<div class="demobar" data-es="MAQUETA CONCEPTUAL · Acceso simulado. Cualquier dato entra al panel de demostración; no se valida ni se almacena nada." data-en="CONCEPT MOCK-UP · Simulated login. Any input opens the demo panel; nothing is validated or stored.">MAQUETA CONCEPTUAL · Acceso simulado. Cualquier dato entra al panel de demostración; no se valida ni se almacena nada.</div>
+
+<header class="nav">
+  <div class="wrap nav-in">
+    <a class="logo" href="index.html"><img src="assets/tritec-logo.png" alt="TRI-TEC Mexico" width="512" height="512"></a>
+    <div class="access" style="margin-left:auto">
+      <a href="index.html" data-es="Volver al inicio" data-en="Back home">Volver al inicio</a>
+    </div>
+    <div class="nav-actions">
+      <div class="lang" role="group" aria-label="Idioma"><button data-lang="es" aria-pressed="true">ES</button><button data-lang="en" aria-pressed="false">EN</button></div>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+<section class="sec">
+  <div class="wrap">
+    <div class="auth">
+
+      <div class="auth-tabs" role="tablist">
+        <button role="tab" data-rol="proveedor" aria-selected="false" data-es="Ofrezco servicios" data-en="I offer services">Ofrezco servicios</button>
+        <button role="tab" data-rol="cliente" aria-selected="true" data-es="Solicito servicios" data-en="I need services">Solicito servicios</button>
+        <button role="tab" data-rol="tritec" aria-selected="false" data-es="Administración" data-en="Admin">Administración</button>
+      </div>
+
+      <div class="auth-card">
+        <h1 id="auth-title">Acceso de cliente</h1>
+        <p class="sub" id="auth-sub">Consulte sus requerimientos, propuestas recibidas y documentos.</p>
+
+        <form id="authform" novalidate>
+          <div class="fgrid" style="grid-template-columns:1fr">
+            <div class="field">
+              <label for="mail" data-es="Correo corporativo" data-en="Corporate email">Correo corporativo</label>
+              <input type="email" id="mail" value="demo@empresa.com">
+            </div>
+            <div class="field">
+              <label for="pass" data-es="Contraseña" data-en="Password">Contraseña</label>
+              <input type="text" id="pass" value="demo1234">
+            </div>
+            <div class="field">
+              <label class="consent" for="rec"><input type="checkbox" id="rec" checked><span data-es="Mantener la sesión iniciada" data-en="Keep me signed in">Mantener la sesión iniciada</span></label>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;margin-top:8px" data-es="Entrar" data-en="Sign in">Entrar</button>
+        </form>
+
+        <div class="auth-note" data-es="En la maqueta no hay validación: cualquier dato abre el panel correspondiente. En producción, el acceso se resuelve con autenticación real, permisos por rol y registro de sesiones." data-en="This mock-up performs no validation: any input opens the matching panel. In production, access uses real authentication, role-based permissions and session logging.">En la maqueta no hay validación: cualquier dato abre el panel correspondiente. En producción, el acceso se resuelve con autenticación real, permisos por rol y registro de sesiones.</div>
+      </div>
+
+      <p class="small muted" style="text-align:center;margin-top:22px">
+        <span data-es="¿Aún no tiene cuenta?" data-en="No account yet?">¿Aún no tiene cuenta?</span>
+        <a class="tlink" href="requerimiento.html" style="font-size:inherit"><span data-es="Plantee su requerimiento sin registrarse" data-en="Submit a requirement without signing up">Plantee su requerimiento sin registrarse</span></a>
+      </p>
+
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-bottom" style="border:0;margin:0;padding:0">
+      <span data-es="© 2026 TRI-TEC · Maqueta conceptual sin valor contractual" data-en="© 2026 TRI-TEC · Concept mock-up, no contractual value">© 2026 TRI-TEC · Maqueta conceptual sin valor contractual</span>
+      <span data-es="Propuesta preparada por BAOBYTE" data-en="Proposal prepared by BAOBYTE">Propuesta preparada por BAOBYTE</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/app.js"></script>
+<script>
+(function(){
+  var DEST={proveedor:'panel-proveedor.html',cliente:'panel-cliente.html',tritec:'panel-tritec.html'};
+  var TXT={
+    proveedor:{es:['Acceso de proveedor','Administre su perfil, su expediente documental y las oportunidades que corresponden a sus capacidades.'],
+               en:['Supplier access','Manage your profile, document file and the opportunities matching your capabilities.']},
+    cliente:{es:['Acceso de cliente','Consulte sus requerimientos, propuestas recibidas y documentos.'],
+             en:['Client access','Review your requirements, proposals received and documents.']},
+    tritec:{es:['Acceso de administración','Bandeja de consolidación: requerimientos entrantes y proveedores disponibles.'],
+            en:['Admin access','Consolidation inbox: incoming requirements and available suppliers.']}
+  };
+  var rol=(new URLSearchParams(location.search).get('rol')||'cliente');
+  if(!DEST[rol]) rol='cliente';
+  var tabs=[].slice.call(document.querySelectorAll('.auth-tabs button'));
+  function paint(){
+    var L=document.documentElement.lang==='en'?'en':'es';
+    tabs.forEach(function(t){t.setAttribute('aria-selected',String(t.dataset.rol===rol));});
+    document.getElementById('auth-title').textContent=TXT[rol][L][0];
+    document.getElementById('auth-sub').textContent=TXT[rol][L][1];
+  }
+  tabs.forEach(function(t){t.addEventListener('click',function(){rol=t.dataset.rol;paint();});});
+  document.querySelectorAll('.lang button').forEach(function(b){b.addEventListener('click',function(){setTimeout(paint,20);});});
+  document.getElementById('authform').addEventListener('submit',function(e){
+    e.preventDefault(); location.href=DEST[rol];
+  });
+  paint();
+})();
+</script>
+</body>
+</html>

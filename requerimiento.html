@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Solicitar una evaluación · TRI-TEC</title>
+<meta name="description" content="Formulario comercial y RFQ — demo conceptual TRI-TEC.">
+<meta name="robots" content="noindex,nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="stylesheet" href="assets/hub.css">
+</head>
+<body>
+<a class="skip" href="#main" data-es="Ir al contenido" data-en="Skip to content">Ir al contenido</a>
+<div class="demobar" data-es="MAQUETA CONCEPTUAL · Formulario funcional sin servidor. Nada de lo que envíe se almacena." data-en="CONCEPT MOCK-UP · Working form without a server. Nothing you submit is stored.">MAQUETA CONCEPTUAL · Formulario funcional sin servidor. Nada de lo que envíe se almacena.</div>
+
+<header class="nav">
+  <div class="wrap nav-in">
+    <a class="logo" href="index.html"><img src="assets/tritec-logo.png" alt="TRI-TEC Mexico" width="512" height="512"></a>
+        <div class="access" style="margin-left:auto">
+      <a href="acceso.html?rol=proveedor" data-es="Ofrezco servicios" data-en="I offer services">Ofrezco servicios</a>
+      <a href="acceso.html?rol=cliente" data-es="Solicito servicios" data-en="I need services">Solicito servicios</a>
+      <a class="admin" href="acceso.html?rol=tritec" data-es="Administración" data-en="Admin">Administración</a>
+    </div>
+<div class="nav-actions">
+      <div class="lang" role="group" aria-label="Idioma"><button data-lang="es" aria-pressed="true">ES</button><button data-lang="en" aria-pressed="false">EN</button></div>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+<section class="inner-hero">
+  <div class="wrap">
+    <nav class="crumb" aria-label="Ruta"><a href="index.html" data-es="Inicio" data-en="Home">Inicio</a> / <span class="muted" data-es="Solicitar una evaluación" data-en="Request an evaluation">Solicitar una evaluación</span></nav>
+    <span class="eyebrow rv" style="display:block;margin-top:24px" data-es="Contacto comercial" data-en="Commercial contact">Contacto comercial</span>
+    <h1 class="rv" data-d="1" data-es="Solicitar una evaluación" data-en="Request an evaluation">Solicitar una evaluación</h1>
+    <p class="lead rv" data-d="2" data-es="Cuatro pasos cortos. Si el requerimiento requiere levantamiento en sitio, se lo decimos en la primera respuesta." data-en="Four short steps. If the requirement needs an on-site survey, we tell you in our first reply.">Cuatro pasos cortos. Si el requerimiento requiere levantamiento en sitio, se lo decimos en la primera respuesta.</p>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="form-wrap">
+
+      <ol class="stepper">
+        <li aria-current="step"><span class="sn">01</span><span data-es="Requerimiento" data-en="Requirement">Requerimiento</span></li>
+        <li><span class="sn">02</span><span data-es="Detalle" data-en="Details">Detalle</span></li>
+        <li><span class="sn">03</span><span data-es="Contacto" data-en="Contact">Contacto</span></li>
+        <li><span class="sn">04</span><span data-es="Revisión" data-en="Review">Revisión</span></li>
+      </ol>
+
+      <form data-steps data-kind="RFQ" novalidate>
+        <input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px">
+
+        <!-- Paso 1 -->
+        <div class="fstep active">
+          <h2 data-es="¿Qué necesita resolver?" data-en="What do you need to solve?">¿Qué necesita resolver?</h2>
+          <p class="hint" data-es="Con esto dirigimos su solicitud al responsable correcto desde el primer momento." data-en="This lets us route your request to the right owner from the start.">Con esto dirigimos su solicitud al responsable correcto desde el primer momento.</p>
+
+          <div class="fgrid">
+            <div class="field f-full">
+              <span class="legend" data-es="Tipo de requerimiento *" data-en="Type of requirement *">Tipo de requerimiento *</span>
+              <div class="opts row" data-required>
+                <label class="opt"><input type="radio" name="tipo" value="Cotización / RFQ"><span data-es="Cotización o RFQ" data-en="Quote or RFQ">Cotización o RFQ</span></label>
+                <label class="opt"><input type="radio" name="tipo" value="Diagnóstico en sitio"><span data-es="Diagnóstico en sitio" data-en="On-site assessment">Diagnóstico en sitio</span></label>
+                <label class="opt"><input type="radio" name="tipo" value="Proyecto nuevo"><span data-es="Proyecto nuevo" data-en="New project">Proyecto nuevo</span></label>
+                <label class="opt"><input type="radio" name="tipo" value="Atención urgente"><span data-es="Atención urgente" data-en="Urgent support">Atención urgente</span></label>
+              </div>
+              <p class="errmsg" role="alert"></p>
+            </div>
+
+            <div class="field">
+              <label for="servicio" data-es="Servicio o capacidad *" data-en="Service or capability *">Servicio o capacidad *</label>
+              <select id="servicio" name="servicio" data-required>
+                <option value="" data-es="Seleccione…" data-en="Select…">Seleccione…</option>
+                <option data-es="Mantenimiento" data-en="Maintenance">Mantenimiento</option>
+                <option data-es="Ingeniería industrial" data-en="Industrial engineering">Ingeniería industrial</option>
+                <option data-es="Gestión de proyectos" data-en="Project management">Gestión de proyectos</option>
+                <option data-es="Ingeniería civil y construcción" data-en="Civil engineering &amp; construction">Ingeniería civil y construcción</option>
+                <option data-es="Automotriz y pintura" data-en="Automotive &amp; paint">Automotriz y pintura</option>
+                <option data-es="Seguridad y EHS" data-en="Safety &amp; EHS">Seguridad y EHS</option>
+                <option data-es="Servicios especializados de personal" data-en="Specialized personnel services">Servicios especializados de personal</option>
+                <option data-es="No estoy seguro" data-en="Not sure yet">No estoy seguro</option>
+              </select>
+              <p class="errmsg" role="alert"></p>
+            </div>
+
+            <div class="field">
+              <label for="industria" data-es="Industria *" data-en="Industry *">Industria *</label>
+              <select id="industria" name="industria" data-required>
+                <option value="" data-es="Seleccione…" data-en="Select…">Seleccione…</option>
+                <option data-es="Automotriz" data-en="Automotive">Automotriz</option>
+                <option data-es="Manufactura" data-en="Manufacturing">Manufactura</option>
+                <option data-es="Alimentos y bebidas" data-en="Food &amp; beverage">Alimentos y bebidas</option>
+                <option data-es="Metalmecánica" data-en="Metalworking">Metalmecánica</option>
+                <option data-es="Logística" data-en="Logistics">Logística</option>
+                <option data-es="Otra" data-en="Other">Otra</option>
+              </select>
+              <p class="errmsg" role="alert"></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Paso 2 -->
+        <div class="fstep">
+          <h2 data-es="Cuéntenos el contexto" data-en="Tell us the context">Cuéntenos el contexto</h2>
+          <p class="hint" data-es="Entre más detalle, más precisa será la respuesta. No hace falta que esté completo." data-en="The more detail, the more precise our reply. It does not need to be complete.">Entre más detalle, más precisa será la respuesta. No hace falta que esté completo.</p>
+
+          <div class="fgrid">
+            <div class="field">
+              <label for="ubicacion" data-es="Ubicación de la planta *" data-en="Plant location *">Ubicación de la planta *</label>
+              <input type="text" id="ubicacion" name="ubicacion" data-required placeholder="Ciudad, Estado">
+              <p class="errmsg" role="alert"></p>
+            </div>
+
+            <div class="field">
+              <label for="fecha" data-es="Fecha estimada de inicio" data-en="Estimated start date">Fecha estimada de inicio</label>
+              <input type="date" id="fecha" name="fecha">
+              <p class="help" data-es="Si aún no la define, déjela en blanco." data-en="Leave blank if not defined yet.">Si aún no la define, déjela en blanco.</p>
+            </div>
+
+            <div class="field f-full">
+              <span class="legend" data-es="Nivel de urgencia *" data-en="Urgency level *">Nivel de urgencia *</span>
+              <div class="opts row" data-required>
+                <label class="opt"><input type="radio" name="urgencia" value="Planeado"><span data-es="Planeado" data-en="Planned">Planeado</span></label>
+                <label class="opt"><input type="radio" name="urgencia" value="Próximo paro"><span data-es="Próximo paro programado" data-en="Next scheduled shutdown">Próximo paro programado</span></label>
+                <label class="opt"><input type="radio" name="urgencia" value="Urgente"><span data-es="Línea detenida" data-en="Line is down">Línea detenida</span></label>
+              </div>
+              <p class="errmsg" role="alert"></p>
+            </div>
+
+            <div class="field f-full">
+              <label for="descripcion" data-es="Descripción del requerimiento *" data-en="Description of the requirement *">Descripción del requerimiento *</label>
+              <textarea id="descripcion" name="descripcion" data-required placeholder="¿Qué equipo o área está involucrada? ¿Desde cuándo ocurre? ¿Qué se ha intentado?"></textarea>
+              <p class="errmsg" role="alert"></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Paso 3 -->
+        <div class="fstep">
+          <h2 data-es="¿Con quién nos comunicamos?" data-en="Who should we contact?">¿Con quién nos comunicamos?</h2>
+          <p class="hint" data-es="Puede adjuntar planos, especificaciones, fotografías o el alcance que ya tenga preparado." data-en="You may attach drawings, specifications, photographs or any scope you already have.">Puede adjuntar planos, especificaciones, fotografías o el alcance que ya tenga preparado.</p>
+
+          <div class="fgrid">
+            <div class="field"><label for="nombre" data-es="Nombre completo *" data-en="Full name *">Nombre completo *</label><input type="text" id="nombre" name="nombre" data-required><p class="errmsg" role="alert"></p></div>
+            <div class="field"><label for="empresa" data-es="Empresa *" data-en="Company *">Empresa *</label><input type="text" id="empresa" name="empresa" data-required><p class="errmsg" role="alert"></p></div>
+            <div class="field"><label for="puesto" data-es="Puesto" data-en="Role">Puesto</label><input type="text" id="puesto" name="puesto"></div>
+            <div class="field"><label for="correo" data-es="Correo electrónico *" data-en="Email *">Correo electrónico *</label><input type="email" id="correo" name="correo" data-required><p class="errmsg" role="alert"></p></div>
+            <div class="field"><label for="telefono" data-es="Teléfono *" data-en="Phone *">Teléfono *</label><input type="tel" id="telefono" name="telefono" data-required placeholder="10 dígitos"><p class="errmsg" role="alert"></p></div>
+
+            <div class="field f-full">
+              <span class="legend" data-es="Archivos adjuntos" data-en="Attachments">Archivos adjuntos</span>
+              <div class="drop" data-list="rfq-files" tabindex="0" role="button" aria-label="Agregar archivos">
+                <input type="file" id="adjuntos" name="adjuntos" multiple accept=".pdf,.doc,.docx,.xls,.xlsx,.dwg,.jpg,.jpeg,.png,.zip">
+                <span class="dt" data-es="Arrastre archivos aquí o haga clic para elegirlos" data-en="Drag files here or click to choose">Arrastre archivos aquí o haga clic para elegirlos</span>
+                <span class="dh" data-es="PDF, Word, Excel, DWG, imágenes o ZIP · máximo 20 MB por archivo" data-en="PDF, Word, Excel, DWG, images or ZIP · max 20 MB per file">PDF, Word, Excel, DWG, imágenes o ZIP · máximo 20 MB por archivo</span>
+              </div>
+              <ul class="files" id="rfq-files"></ul>
+            </div>
+
+            <div class="field f-full">
+              <label class="consent" for="privacidad">
+                <input type="checkbox" id="privacidad" name="privacidad" data-required>
+                <span data-es="He leído y acepto el aviso de privacidad, y autorizo el tratamiento de mis datos para atender esta solicitud. *" data-en="I have read and accept the privacy notice, and authorize processing of my data to handle this request. *">He leído y acepto el aviso de privacidad, y autorizo el tratamiento de mis datos para atender esta solicitud. *</span>
+              </label>
+              <p class="errmsg" role="alert"></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Paso 4 -->
+        <div class="fstep">
+          <h2 data-es="Revise antes de enviar" data-en="Review before sending">Revise antes de enviar</h2>
+          <p class="hint" data-es="Puede regresar a cualquier paso para corregir." data-en="You can go back to any step to make changes.">Puede regresar a cualquier paso para corregir.</p>
+          <div class="review"><dl></dl></div>
+          <p class="small muted" data-es="Al enviar recibirá un folio de seguimiento y una confirmación por correo. Su solicitud llega al responsable del área correspondiente." data-en="On submission you receive a tracking number and an email confirmation. Your request reaches the owner of the relevant area.">Al enviar recibirá un folio de seguimiento y una confirmación por correo. Su solicitud llega al responsable del área correspondiente.</p>
+        </div>
+
+        <div class="fnav">
+          <button type="button" class="btn btn-ghost" data-back data-es="Anterior" data-en="Back">Anterior</button>
+          <button type="button" class="btn btn-primary" data-next data-es="Continuar" data-en="Continue">Continuar</button>
+          <button type="submit" class="btn btn-primary" data-send data-es="Enviar solicitud" data-en="Submit request">Enviar solicitud</button>
+        </div>
+      </form>
+
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-bottom" style="border:0;margin:0;padding:0">
+      <span data-es="© 2026 TRI-TEC · Demo conceptual sin valor contractual" data-en="© 2026 TRI-TEC · Concept demo, no contractual value">© 2026 TRI-TEC · Demo conceptual sin valor contractual</span>
+      <span data-es="Propuesta preparada por BAOBYTE" data-en="Proposal prepared by BAOBYTE">Propuesta preparada por BAOBYTE</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/app.js"></script>
+<script src="assets/forms.js"></script>
+</body>
+</html>
